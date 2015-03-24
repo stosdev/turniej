@@ -1,0 +1,89 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{fancyvrb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem F: Modyfikacja koloru kwiatu tulibajtu}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem F: Modyfikacja koloru kwiatu tulibajtu
+  \end{Huge}
+\end{center}
+
+W~instytucie genetyki roślin w~Bajtlandzie prowadzone są badania nad nowymi odmianami tulibajtu z~wykorzystaniem technik
+inżynierii genetycznej. Botanicy zmierzają w~kierunku pozyskania wielu interesujących barw tego pięknego kwiatu. Wśród
+setek barwników roślinnych wyróżnia się trzy główne grupy związków chemicznych. Są to karotenoidy, betalainy oraz
+flawonoidy. Ostatnia z~tych grup ma największy wpływ na ostateczny kolor kwiatów. Do flawonoidów należy wiele klas
+związków, takich jak antocyjaniny (odpowiedzialne za kolor pomarańczowy, czerwony, purpurowy, fioletowy i~niebieski),
+aurony, chalkony (żółty), flawony i~flawonole (postrzegane jako bezbarwne lub bladożółte). Spośród znanych barwników
+roślinnych wybrano podstawowe i~oznaczono je kolejnymi znakami alfabetu systemu 16-kowego, tj. 0, 1, \ldots, 9, A, B, \ldots, F.
+Ostatnio prowadzone badania skupiają się na odpowiednim klasyfikowaniu i~krzyżowaniu materiału genetycznego różnych
+odmian tulibajtu. Materiał genetyczny każdej odmiany jest charakteryzowany za pomocą specjalnie zdefiniowanego ciągu
+oznaczeń substancji barwiących, które mają największy wpływ na barwę kwiatu tejże odmiany. Np. tulibajt biały ma
+\textbf{charakterystykę} \underline{D}DAF\underline{6A}B3\underline{4A}D\underline{F},
+natomiast tulibajt purpurowy B\underline{D}1\underline{6A4}36B\underline{AF}. Genetycy zauważyli, że najbardziej
+intensywne barwy kwiatów uzyskuje się krzyżując takie odmiany, dla których subkod genetyczny jest opisany za pomocą co
+najmniej 6 substancji (być może tych samych ale zapisanych na różnych pozycjach). Subkod genetyczny wyznaczony dla
+dwóch odmian stanowi uporządkowany (najdłuższy z~możliwych) ciąg znaków, które w~niezmienionej kolejności występują
+zarówno w~charakterystyce jednej jak i~drugiej odmiany. Np. subkodem tulibajtu białego i~purpurowego jest \underline{D6A4AF}, ale
+również DA6BAF jak i~D6A3AF. Dwie odmiany mogą mieć kilka subkodów, ale każdy z~nich ma tyle samo znaków. Jeśli
+subkod dwóch odmian ma co najmniej 6 znaków, skrzyżowanie pary da intensywną barwę kwiatu. Botanicy wyznaczyli
+charakterystyki wielu odmian tulibajtu i~chcą sprawdzić, które z~nich warto krzyżować. Zwrócili się z~zadaniem do
+informatyków.
+
+\subsection*{Prosty przykład}
+
+Po skrzyżowaniu dwóch odmian o charakterystykach odpowiednio
+\underline{\textbf{D}}DAF\underline{\textbf{6A}}B3\underline{\textbf{4A}}D\underline{\textbf{F}} i B\underline{\textbf{D}}1\underline{\textbf{6A4}}36B\underline{\textbf{AF}}
+uzyskamy odmianę z subkodem genetycznym
+\underline{\textbf{D6A4AF}} albo D6A3AF albo D6ABAF albo DA6BAF.
+
+\section*{Wejście}
+
+W~pierwszym wierszu wejścia znajduje się całkowita liczba $n$ ($2 \leqslant n \leqslant 50$) oznaczająca ilość par odmian tulibajtu, dla których należy
+policzyć długość subkodu.
+
+W~kolejnych $2n$ liniach umieszczone są charakterystyki odmian tulibajtu. Dla każdej kolejnej pary charakterystyk należy
+wyznaczyć długość subkodu.
+
+\section*{Wyjście}
+
+W~pierwszej linii wyjścia wypisz $n$ liczb (oddzielonych pojedynczą spacją) reprezentujących długości subkodów
+wyznaczonych dla $n$ kolejnych par charakterystyk.
+
+\section*{Przykład}
+\begin{multicols*}{2}
+dane wejściowe:
+\begin{Verbatim}[commandchars=+\[\]]
+3
++underline[45]A+underline[64]D+underline[5]F5+underline[B34]2
++underline[456]3+underline[45]AC6A+underline[B]7+underline[34]5
+8+underline[7]9+underline[A]7D680A+underline[968]
+6+underline[7A896]BD7+underline[8]9
++underline[5]67+underline[45]D6E+underline[7]4F+underline[56]
+3+underline[5]2D+underline[4]E+underline[5]CA+underline[7]3B+underline[56]
+\end{Verbatim}
+wynik:
+\begin{Verbatim}[commandchars=+\[\]]
+8 6 6
+\end{Verbatim}
+\end{multicols*}
+\end{document}

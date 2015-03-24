@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem DZI: Dzielniki}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem DZI: Dzielniki
+  \end{Huge}
+\end{center}
+
+Pani z~matematyki ma problemy z~utrzymaniem spokoju na szkolnych zajęciach. W~końcu
+zdecydowała, że dzieci muszą zająć się jakimś ciekawym dla nich tematem. Dzielniki liczby
+okazały się zagadnieniem bardzo absorbującym uwagę dzieci. Pani podaje przedział liczb, a~dzieci
+mają odpowiedzieć na pytanie, która liczba z~tego przedziału ma najwięcej dzielników. Zwycięzca
+dostaje piątkę i~cukierka. Mały Jaś jest sprytny i~chce znaleźć osobę, która napisze mu aplikację na
+telefon komórkowy, co pozwoli mu zawsze wygrywać. Zwraca się z~prośbą do Ciebie.
+
+\section*{Wejście}
+
+W~pierwszej linii wejścia podana jest liczba całkowita n ($1 \leqslant n \leqslant 10$) oznaczająca liczbę zapytań
+nauczycielki. W~kolejnych n liniach znajdują się po dwie liczby a~i~b ($1 \leqslant a \leqslant b \leqslant 100$) oznaczające
+dolny i~górny zakres szukanego przedziału.
+
+\section*{Wyjście}
+
+W~każdej z~n linii wyjścia ma się pojawić odpowiedni wynik: liczba posiadająca najwięcej
+dzielników z~wszystkich liczb należących do przedziału <a, b>. Jeżeli istnieje więcej niż jedna
+liczba z~największą ilością dzielników, to trzeba wypisać najmniejszą z~nich.i
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+3
+1 50
+60 80
+5 15
+\end{verbatim}
+wynik:
+\begin{verbatim}
+48
+60
+12
+\end{verbatim}
+\end{document}

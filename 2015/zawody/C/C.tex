@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem C: Chodnik}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem C: Chodnik
+  \end{Huge}
+\end{center}
+
+Robotnicy pracują przy układaniu chodnika. Na dworze upał, praca jest ciężka i~monotonna, a~szef
+ciągle pogania. Dysponują oni prostokątnymi płytami chodnikowymi o~rozmiarze $2$ na $1$, a~mają za
+zadanie ułożyć chodnik o~szerokości równej $4$. Jeden z~robotników (o~imieniu Zdzisław) zauważył,
+że może układać płyty na różne sposoby i~tworzyć rozmaite mozaiki. Dzięki tym rozmyślaniom
+praca stała się mniej nużąca. Spytał on nawet szefa, w~jaki sposób powinien układać płyty na co
+tamten (najwyraźniej pozbawiony wyobraźni) odparł, że on widzi tylko jeden sposób ich ułożenia.
+Gdy Zdzisław rzekł, że tych sposobów może być więcej niż ludzi na ziemi, to szef i~jego koledzy
+wyśmiali biedaka, każąc mu się udać do psychiatry. A~może to właśnie oni powinni się tam udać?
+Pomóż Zdzisławowi (który przecież nie jest programistą) i~napisz program obliczający ile jest
+możliwości ułożenia chodnika o~zadanej długości.
+
+\section*{Wejście}
+W~pierwszej linii wejścia podana jest liczba $N$ ($1\leqslant N\leqslant 1000$) zapytań. W~każdej z~kolejnych $N$ linii
+podana będzie jedna liczba całkowita $n$ ($1\leqslant n \leqslant 10^6$) oznaczająca długość układanego chodnika.
+
+\section*{Wyjście}
+W~$N$ liniach wyjścia powinny się pojawić odpowiedzi na kolejne zapytania. W~każdej linii jest to
+liczba sposobów ułożenia chodnika modulo $10^{18}$.
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+2
+2
+3
+\end{verbatim}
+wynik:
+\begin{verbatim}
+5
+11
+\end{verbatim}
+\end{document}

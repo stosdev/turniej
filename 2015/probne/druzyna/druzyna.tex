@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem DRU: Drużyna}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem DRU: Drużyna
+  \end{Huge}
+\end{center}
+
+W~pewnym egzotycznym kraju postanowiono stworzyć drużynę koszykówki. Z~racji tego, że
+rozrywek tam mają niewiele, to zgłosiło się bardzo wielu chętnych. Sam trener też nie ma wielkiego
+pojęcia o~tym sporcie i~w~ramach rekrutacji kieruje się tylko jednym kryterium – wzrostem.
+Zgodnie z~jego pomysłem na parkiecie zawsze ma grac pięciu najwyższych zawodników. Jest tak
+wielu chętnych, że trener nie poradzi sobie z~tym zadaniem bez pomocy komputera i~oczywiście
+dobrego programisty.
+
+\section*{Wejście}
+
+W~pierwszej linii wejścia podana jest liczba całkowita n ($5 \leqslant n \leqslant 10^5$) oznaczająca liczbę
+kandydatów do drużyny. W~każdej z~kolejnych n linii pojawi się jedna liczba całkowita w
+($100 \leqslant w \leqslant 250$) oznaczająca wzrost danego kandydata.
+
+\section*{Wyjście}
+
+W~jedynej linii wyjścia ma się pojawić jedna liczba całkowita – oznaczająca średni wzrost
+zawodników wybranych do gry. Można zakładać, że średni wzrost zawsze będzie liczbą całkowitą.
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+10
+182
+151
+212
+177
+224
+199
+204
+191
+165
+143
+\end{verbatim}
+wynik:
+\begin{verbatim}
+206
+\end{verbatim}
+\end{document}

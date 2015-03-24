@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem A: Bezpieczne liczby}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem A: Bezpieczne liczby
+  \end{Huge}
+\end{center}
+
+Mały Jaś bardzo lubi matematykę, a~szczególnie ,,kręcą'' go liczby pierwsze. Przypomnijmy, że to
+liczby naturalne mające dokładnie dwa różne dzielniki: jedynkę i~samą siebie. Już jako małe
+dziecko na kartce papieru wyznaczał kolejne liczby pierwsze. Później czytał on o~fascynującej
+historii odkrywania coraz większych liczb pierwszych. Jaś wie, że początkowo występują one
+bardzo często, ale z~czasem odstępy między nimi rosną (aczkolwiek ten wzrost jest powolny).
+Ostatnio tata powiedział Jasiowi o~tzw. bezpiecznych liczbach pierwszych, czyli takich $p$, że
+$\lfloor \frac{p}{2}\rfloor$ jest również liczbą pierwszą. Tata wyjaśnił, że mają one szczególne zastosowanie w
+kryptografii, co szczególnie zainteresowało Jasia, który w~przyszłości chce zostać matematykiem
+lub informatykiem. Jaś stwierdził, że bezpiecznych liczb pierwszych jest dużo mniej od zwykłych
+liczb pierwszych i~ich wyznaczanie przychodzi mu z~pewnym trudem. Interesują go zwłaszcza
+liczności tych liczb w~poszczególnych przedziałach. Niestety nie jest on w~stanie poradzić sobie z
+tym samodzielnie (przynajmniej dopóki nie nauczy się programować). Poprosił o~pomoc swego
+taty, który jednak ostatnio jest bardzo zapracowany (nielegalnie manipuluje cyferkami na serwerach
+bankowych). W~związku z~tym zwraca się on do swego kuzyna, czyli Ciebie o~pomoc w~tej
+niecierpiącej zwłoki sprawie.
+
+\section*{Wejście}
+
+W~pierwszej linijce wejścia są podana jest jedna liczba całkowita $n$ ($1 \leqslant n \leqslant 10$) oznaczająca liczbę
+zapytań Jasia. W~kolejnych $n$ liniach podane są po dwie liczby całkowite $a$~i~$b$ ($1 \leqslant a \leqslant b \leqslant 10^{12} , b-a \leqslant 10^7$)
+oznaczające dolny i~górny kraniec interesującego Jasia przedziału.
+
+\section*{Wyjście}
+W~kolejnych $n$ liniach wyjścia należy wypisać po jednej liczbie całkowitej, która oznacza liczbę bezpiecznych liczb pierwszych należących do odpowiedniego przedziału <$a$, $b$>.
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+4
+1 10
+11 20
+21 30
+1 100
+\end{verbatim}
+wynik:
+\begin{verbatim}
+2
+1
+1
+7
+\end{verbatim}
+\end{document}

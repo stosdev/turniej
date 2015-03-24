@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem E: Kasa misiu, kasa}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem E: Kasa misiu, kasa
+  \end{Huge}
+\end{center}
+
+W~Polsce XXII wieku płaci się w~zasadzie za wszystko. W~celu załatania dziury budżetowej
+wprowadzono nawet podatek od oddychania i~od mówienia. Dużo płaci się również za posiadanie
+dzieci oraz za brak dzieci. Nie inaczej sprawa się ma z~drogami -- przejazd każdą z~nich (nieważne
+czy to autostrada, czy polny dukt) jest obciążony pewną opłatą, którą należy uiścić w~specjalnej
+budce przy wjeździe na dany odcinek drogi. Stąd kierowców (oczywiście tych, którzy jeszcze nie
+dali nogi z~kraju) interesuje nie tylko jak najkrótszy czas podróży, ale również jej koszt. W
+internecie powstaje nawet specjalny portal, którego zadaniem jest wyszukiwanie najbardziej
+korzystnych połączeń, które nie zrujnują budżetu przeciętnego Kowalskiego. Twórcy portalu
+zgłosili się do Ciebie z~prośbą o~napisanie odpowiedniego algorytmu. Celem jest znalezienie
+najszybszego przejazdu pomiędzy zadaną parą miast, którego łączny koszt nie przekracza zadanego
+budżetu.
+
+\section*{Wejście}
+
+W~pierwszej linijce wejścia są podane są trzy liczby całkowite $n$, $m$, $b$ ($2\leqslant n \leqslant 3000$,
+$1\leqslant m \leqslant 30000$, $1\leqslant b \leqslant 3000$) oznaczające odpowiednio: liczbę miast, liczbę łączących je
+dwukierunkowych dróg oraz dostępny budżet. W~kolejnych $m$ liniach pojawią się informacje o
+kolejnych drogach: w~każdej z~linii po cztery liczby całkowite $x$, $y$, $t$, $c$ ($1\leqslant x$, $y\leqslant n$, $1\leqslant t\leqslant 1000$,
+$1\leqslant c\leqslant 1000$) oznaczające odpowiednio numery połączonych miast, czas przejazdu oraz koszt
+przejazdu. W~ostatniej linii wejścia podane są dwie liczby całkowite $s$, $e$ ($1\leqslant s$, $e\leqslant n$) oznaczające
+miasto początkowe i~miasto końcowe podróżny.
+
+\section*{Wyjście}
+W jedynej linii wejścia ma się pojawić czas najkrótszej podróży, której koszt nie przekracza
+budżetu.
+
+Można założyć, że rozwiązanie zawsze istnieje.
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+8 15 7
+1 2 3 2
+1 3 5 1
+1 4 4 1
+2 3 1 3
+2 5 3 3
+2 7 4 1
+3 4 2 3
+3 7 2 1
+4 6 5 2
+4 7 5 1
+5 7 8 1
+5 8 3 3
+6 7 3 1
+6 8 4 2
+7 8 7 1
+1 8
+\end{verbatim}
+wynik:
+\begin{verbatim}
+13
+\end{verbatim}
+\end{document}

@@ -1,0 +1,90 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem S: Prezes Bajt}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem D: Prezes Bajt
+  \end{Huge}
+\end{center}
+
+Prezes firmy XY pan Bajt dostał nagrodę ,,LIDERA BIZNESU'' za niekwestionowane osiągnięcia finansowe swojej firmy.
+Tradycyjnie, na gali wręczenia nagrody, LIDER przedstawia krótką prezentację strategii prowadzenia firmy przed kolegami z
+branży. Pan Bajt pracuje na stanowisku już od n miesięcy, więc zlecił przygotowanie szczegółowego zestawienia finansowego
+opisującego ile firma zarobiła / straciła w~poszczególnych miesiącach. Pan Bajt zdecydował, że opowie jedynie o~tym okresie,
+w~którym zarobił najwięcej. Poprosił informatyków o~wyselekcjonowanie takiego okresu. Szukany okres czasu musi być
+nieprzerwany (tzn. pewna liczba bezpośrednio następujących po sobie miesięcy) oraz ,,najważniejsze'' -- suma zysków
+uzyskanych podczas wyselekcjonowanych miesięcy musi być największa. Długość okresu nie ma znaczenia, ponieważ pan
+Bajt prowadzi firmę niemal od początku a~jego sukces jest wyjątkowy.
+
+\section*{Prosty przykład}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+  \hline
+  6 & -10 & 5 & -1 & 4 & 8 & -3 & 9 & 11\\
+  \hline
+\end{tabular}
+\end{center}
+
+Największą sumę uzyskamy dodając zyski / straty z~miesięcy $3$, $4$, $5$, $6$, $7$, $8$ i~$9$, tj. $5 + (-1) + 4 + 8 + (-3) + 9 + 11 = 33$
+
+\section*{Wejście}
+
+W~pierwszym wierszu wejścia znajduje się całkowita liczba $n$ ($2 < n < 10^6$) określająca ilość miesięcy przepracowanych przez pana
+Bajta na stanowisku prezesa.
+
+W~kolejnych $n$ liniach umieszczone są liczby całkowite z~przedziału [$-10000, 10000$] reprezentujące straty / zyski firmy w
+kolejnych $n$ miesiącach. Umawiamy się, że kolejne miesiące są numerowane od $1$ do $n$.
+
+\section*{Wyjście}
+
+W~pierwszej linii wyjścia zapisz pierwszy i~ostatni miesiąc okresu, w~którym pan Bajt uzyskał największy sukces (tj.
+zarobił najwięcej pieniędzy) oraz sumę zysków / strat z~tego okresu. Wartości oddziel pojedynczą spacją.
+
+\section*{Przykład}
+\begin{multicols*}{2}
+dane wejściowe:
+\begin{verbatim}
+15
+51
+10
+-680
+1
+-68
+10
+3445
+45
+-10
+1000
+400
+90
+5645
+546
+564
+\end{verbatim}
+wynik:
+\begin{verbatim}
+6 15 11735
+\end{verbatim}
+\end{multicols*}
+\end{document}

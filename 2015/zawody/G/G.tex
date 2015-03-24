@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{polski}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[a4paper,headheight=65pt,bottom=65pt]{geometry}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Podlaski Turniej w~Programowaniu Zespołowym 2015\\ Politechnika Białostocka, 21-22 marca 2015}
+\fancyhead[R]{\includegraphics[scale=0.7]{logoturnieju.png}}
+\fancyfoot[L]{Problem G: Wyścigi}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+  \begin{Huge}
+    Problem G: Wyścigi
+  \end{Huge}
+\end{center}
+
+Kazik i~jego koledzy są cool. Ich życie to wspaniałe samochody, wielka prędkość, adrenalina,
+mocne wrażenia\ldots300 km/h na autostradzie pod prąd? Nic nowego. Pokonywanie zakrętów na
+granicy śmierci? Chleb powszedni. Nielegalne wyścigi samochodowe to wielka frajda i~okazja do
+poznania wielu ciekawych ludzi -- Kazik czasem nawet ściga się z~kierowcami z~innych części
+świata. Można by pomyśleć, że szaleją za nim tabuny dziewczyn. Jest jednak inaczej, bo Kazio jest
+przyklejony do monitora dniami i~nocami grając w~wyścigówki. Nie śpi, nie je i~nie pije. Tak
+właśnie wygląda jego życie i~jego świat. Na całym świecie jest wielu takich jak on. Dzięki nim
+pracownicy firm programistycznych, tacy jak Ty, zarabiają niezłe pieniądze. Wyniki
+poszczególnych graczy umieszczane są na serwerze. Na podstawie zbiorczych danych należy
+przygotować zestawienie dotyczące rekordów poszczególnych tras. Twoim zadaniem jest napisanie
+programu, który dla każdej trasy określi, ile razy był ustanawiany na niej nowy rekord.
+
+\section*{Wejście}
+
+W~pierwszej linii wejścia podane są dwie liczby $n$ i~$m$ ($1\leqslant n\leqslant 10^6$, $1\leqslant m\leqslant 10$) oznaczające liczbę
+przejazdów i~liczbę tras. W~każdej z~kolejnych $n$ linii podane są opisy poszczególnych przejazdów:
+po trzy liczby całkowite $a$, $b$, $c$ ($1\leqslant a\leqslant m$, $1\leqslant b\leqslant 10^6$, $1\leqslant c\leqslant 10^6$) oznaczające odpowiednio
+numer trasy, czas przejazdu oraz moment, w~którym ukończono trasę. Zakładamy, że na danej trasie
+nie istnieją dwa przejazdy, które skończyły się w~tym samym momencie.
+
+\section*{Wyjście}
+
+W~$m$ liniach wyjścia powinny pojawić się informacje dotyczące liczby pobitych rekordów dla
+kolejnych tras. W~wyliczeniach nie należy uwzględniać wyrównań rekordów.
+
+\section*{Przykład}
+dane wejściowe:
+\begin{verbatim}
+10 3
+1 1008 4095
+2 349 5900
+1 911 3495
+3 3945 394
+2 407 3335
+1 883 5239
+1 883 6678
+3 4023 500
+2 313 7104
+3 4499 989
+\end{verbatim}
+wynik:
+\begin{verbatim}
+2
+3
+1
+\end{verbatim}
+\end{document}
